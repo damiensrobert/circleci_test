@@ -1,0 +1,11 @@
+version: 2.1
+jobs:
+  build:
+    docker:
+      - image: cimg/node:14.10.1
+        auth:
+          username: damiensrobert83@outlook.com
+          password: $DOCKERHUB_PASSWORD
+    steps:
+      - checkout
+      - run: echo "Hello World"
